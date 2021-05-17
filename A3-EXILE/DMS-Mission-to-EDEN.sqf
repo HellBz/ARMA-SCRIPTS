@@ -1,4 +1,3 @@
-
 private _objects = 
 [
 	["M113Wreck",[5.0705,7.10547,0],321.661],
@@ -16,7 +15,7 @@ private _objects =
     
         _object = create3DENEntity ["Object", _x select 0, [0,0,0], true];
         _object set3DENAttribute ["position", _x select 1 ];
-        _object setDir ( (_x select 1 ) select 2 );
+        _object setDir ( _x select 2 );
         _pitch_bank = _object call BIS_fnc_getPitchBank;
         _dir = getDir _object;
         _object set3DENAttribute ["rotation", [_pitch_bank select 0, _pitch_bank select 1, _dir]];
@@ -26,7 +25,7 @@ private _objects =
     
         _object = create3DENEntity ["Object", "Sign_Arrow_Green_F", [0,0,0], true];
         _object set3DENAttribute ["position", _x select 1 ];
-        _object setDir ( (_x select 1 ) select 2 );
+        _object setDir ( _x select 2 );
         _pitch_bank = _object call BIS_fnc_getPitchBank;
         _dir = getDir _object;
         _object set3DENAttribute ["rotation", [_pitch_bank select 0, _pitch_bank select 1, _dir]];
